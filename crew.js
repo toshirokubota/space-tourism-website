@@ -55,6 +55,7 @@ const updateActiveState = () => {
     for(let i=0; i<buttons.length; ++i) {
         if(i == idx) {
             buttons[i].setAttribute('aria-selected', true);
+            console.log(i, active_choice);
         } else {
             buttons[i].setAttribute('aria-selected', false);
         }

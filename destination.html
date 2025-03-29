@@ -31,26 +31,35 @@
         </nav>
     </header>
     <main class="grid-container">
-        <div class="flex flex-col">
-          <h1 class="uppercase fs-500 ff-sans-cond">01 Pick your destination</h1>
-          <picture id="picture">
+        <!-- <div class="flex flex-col" style="padding-inline:20%;"> -->
+          <h1 class="uppercase fs-300 ff-sans-cond"><span class="text-accent">01</span> Pick your destination</h1>
+          <picture id="picture" style="padding-inline: 30%">
             <source srcset="" type="image/webp">
             <img src="" alt="">          
           </picture>
-        </div>
-        <div>
-          <ul id="destination-choice" class="underline-indicators flex">
+        <!-- </div> -->
+        <div class="flow">
+          <ul id="destination-choice" class="underline-indicators flex justify-content-center">
               <button class="uppercase button-plain" aria-selected="true">Moon</button>
               <button class="uppercase button-plain">Mars</button>
               <button class="uppercase button-plain">Europa</button> 
               <button class="uppercase button-plain">Titan</button>
           </ul>    
-          <h2 id="name"></h2>
-          <p id="description">
+          <h2 id="name" class="fs-700 uppercase"></h2>
+          <p id="description" class="fs-100 ff-sans-normal text-accent">
           </p>
-          <p>Avg. distance<span id="distance"></span></p>
-        
-          <p>Est. travel time<span id="travel">3 days</span></p>  
+          <hr style="border: none; background-color: hsl(var(--clr-white)/0.25); height: 1pt;">
+          <div class="destination-data flex flex-col">
+            <p class="ff-sans-cond fs-100 text-accent uppercase">
+              Avg. distance
+              <span id="distance" class="d-block ff-serif fs-500 text-white uppercase"></span>
+            </p>
+          
+            <p class="ff-sans-cond fs-100 text-accent uppercase">
+              Est. travel time
+              <span id="travel" class="d-block ff-serif fs-500 text-white uppercase"></span>
+            </p>    
+          </div>
         </div>
     </main>
   

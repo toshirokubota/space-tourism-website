@@ -40,7 +40,7 @@ const populateTechnology = (data, tech) => {
         name.innerText = tech.name;
         description.innerText = tech.description;
         picture.innerHTML = `
-                <source srcset="${tech.images.portrait}" media="(orientation: portrait)" />
+                <source srcset="${tech.images.portrait}" media="(min-width: 45rem)" />
                 <img src="${tech.images.landscape}" alt="" />
         `;
     }
