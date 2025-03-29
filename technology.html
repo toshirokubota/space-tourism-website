@@ -11,7 +11,7 @@
       rel="stylesheet">      
   <!-- Our custom CSS -->
   <link rel="stylesheet" href="style.css">
-  <script src="destination.js" defer></script>
+  <script src="technology.js" defer></script>
   <script src="shared.js" defer></script>
 </head>
 <body>
@@ -31,26 +31,24 @@
         </nav>
     </header>
     <main class="grid-container">
-        <h1 class="uppercase">01 Pick your destination</h1>
+        <h1 class="uppercase">03 Space Launch 101</h1>
+        <div class="uppercase">the terminology...</div>
         <div>
-            <ul id="destination-choice" class="underline-indicators flex">
-                <li><button class="uppercase button-plain">Moon</button></li>
-                <li><button class="uppercase button-plain">Mars</button></li>
-                <li><button class="uppercase button-plain">Europa</button></li> 
-                <li><button class="uppercase button-plain">Titan</button></li>
+            <h2 id="name"></h2>
+            <p id="description">
+            </p>
+            <picture id="picture">
+                <source srcset="" media="(orientation: portrait)" />
+                <img src="" alt="" />
+            </picture>
+        </div>
+        <div>
+            <ul id="technology-choice" class="underline-indicators flex dot-indicators">
+                <button class="button-plain"></button>
+                <button class="button-plain"></button>
+                <button class="button-plain"></button> 
             </ul>    
         </div>
-        <h2 id="name"></h2>
-        <p id="description">
-        </p>
-        <picture id="picture">
-            <source srcset="" type="image/webp">
-            <img src="" alt="">          
-        </picture>
-      
-        <p>Avg. distance<span id="distance"></span></p>
-      
-        <p>Est. travel time<span id="travel">3 days</span></p>
     </main>
   
 </body>
