@@ -11,10 +11,10 @@
       rel="stylesheet">      
   <!-- Our custom CSS -->
   <link rel="stylesheet" href="style.css">
-  <script src="technology.js" defer></script>
-  <script src="shared.js" defer></script>
+  <script type="module" src="technology.js" defer></script>
+  <script type="module" src="shared.js" defer></script>
 </head>
-<body>
+<body class="technology">
     <header class="primary-header flex">
         <div>
           <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
@@ -22,31 +22,31 @@
         <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
         <!-- <nav> style="--gap:8rem;"> -->
         <nav>
-          <ul id="primary-navigation" data-visible="false" class="flex flex-col primary-navigation underline-indicators">
-            <li class="active"><a href="#"><span>00</span> Home</a></li>
+          <ul id="primary-navigation" data-visible="false" class="flex primary-navigation underline-indicators">
+            <li><a href="./index.html"><span>00</span> Home</a></li>
             <li><a href="./destination.html"><span>01</span> Destination</a></li>
             <li><a href="./crew.html"><span>02</span> Crew</a></li>
-            <li><a href="./technology.html"><span>03</span> Technology</a></li>
+            <li class="active"><a href="./technology.html"><span>03</span> Technology</a></li>
           </ul>
         </nav>
     </header>
     <main class="grid-container">
         <h1 class="uppercase">03 Space Launch 101</h1>
-        <div class="uppercase">the terminology...</div>
+        <picture id="picture">
+          <source srcset="" media="(orientation: portrait)" />
+          <img src="" alt="" />
+        </picture>
         <div>
+            <div class="uppercase">the terminology...</div>
             <h2 id="name"></h2>
             <p id="description">
             </p>
-            <picture id="picture">
-                <source srcset="" media="(orientation: portrait)" />
-                <img src="" alt="" />
-            </picture>
         </div>
         <div>
-            <ul id="technology-choice" class="underline-indicators flex dot-indicators">
-                <button class="button-plain"></button>
-                <button class="button-plain"></button>
-                <button class="button-plain"></button> 
+            <ul id="technology-choice" class="underline-indicators flex circle-indicators fs-500">
+                <button class="button-plain" aria-selected="true">1</button>
+                <button class="button-plain">2</button>
+                <button class="button-plain">3</button> 
             </ul>    
         </div>
     </main>

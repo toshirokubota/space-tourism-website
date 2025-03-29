@@ -11,10 +11,10 @@
       rel="stylesheet">      
   <!-- Our custom CSS -->
   <link rel="stylesheet" href="style.css">
-  <script src="crew.js" defer></script>
-  <script src="shared.js" defer></script>
+  <script type="module" src="crew.js" defer></script>
+  <script type="module" src="shared.js" defer></script>
 </head>
-<body>
+<body class="crew">
     <header class="primary-header flex">
         <div>
           <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
@@ -22,33 +22,33 @@
         <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
         <!-- <nav> style="--gap:8rem;"> -->
         <nav>
-          <ul id="primary-navigation" data-visible="false" class="flex flex-col primary-navigation underline-indicators">
-            <li class="active"><a href="#"><span>00</span> Home</a></li>
+          <ul id="primary-navigation" data-visible="false" class="flex primary-navigation underline-indicators">
+            <li><a href="./index.html"><span>00</span> Home</a></li>
             <li><a href="./destination.html"><span>01</span> Destination</a></li>
-            <li><a href="./crew.html"><span>02</span> Crew</a></li>
+            <li class="active"><a href="./crew.html"><span>02</span> Crew</a></li>
             <li><a href="./technology.html"><span>03</span> Technology</a></li>
           </ul>
         </nav>
     </header>
     <main class="grid-container">
+      <div>
         <h1 class="uppercase">02 Meet your crew</h1>
         <div id="role"></div>
         <h2 id="name"></h2>
         <p id="bio">
         </p>
-        <picture id="picture">
-            <source srcset="" type="image/webp">
-            <img src="" alt="">          
-        </picture>
-        <div>
             <ul id="crew-choice" class="underline-indicators flex dot-indicators">
-                <button class="button-plain"></button>
+                <button class="button-plain" aria-selected="true"></button>
                 <button class="button-plain"></button>
                 <button class="button-plain"></button> 
                 <button class="button-plain"></button>
             </ul>    
-        </div>
-    </main>
+      </div>
+      <picture id="picture">
+        <source srcset="" type="image/webp">
+        <img src="" alt="">          
+      </picture>
+  </main>
   
 </body>
 </html>
