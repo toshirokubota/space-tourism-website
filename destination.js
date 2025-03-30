@@ -14,6 +14,7 @@ const key = 'myData';
 const fetchUrl = './data.json';
 const key2 = 'destination_choice';
 
+//initialize the page
 getData(key, fetchUrl).then((data) => {
     if (data) {
         console.log('Data loaded:', data);
@@ -36,6 +37,7 @@ getData(key, fetchUrl).then((data) => {
     }
 });
 
+//populate the page
 const populateDestination = (data, destination) => {
     if(destination) {
         description.innerText = destination.description;
@@ -44,11 +46,12 @@ const populateDestination = (data, destination) => {
         name.innerText = destination.name;
         picture.innerHTML = `
             <source srcset="${destination.images.webp}" type="image/webp">
-            <img src="${destination.images.png}" alt="">          
+            <img src="${destination.images.png}" alt="image of ${destination.name}">          
         `;
     }
 }
 
+//update aria-selected attribute
 const updateActiveState = () => {
     for(let button of buttons) {
         if(button.innerHTML == active_choice) {
@@ -59,6 +62,7 @@ const updateActiveState = () => {
     }
 }
 
+//callback for each selection button
 buttons.forEach(btn => {
     btn.addEventListener('click', ()=> {
         console.log(btn);

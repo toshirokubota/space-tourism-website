@@ -13,6 +13,7 @@ const key = 'myData';
 const fetchUrl = './data.json';
 const key2 = 'crew_choice';
   
+//initialize the page
 getData(key, fetchUrl).then((data) => {
 if (data) {
     console.log('Data loaded:', data);
@@ -36,20 +37,20 @@ if (data) {
     }
 });
 
+//populate the page
 const populateCrew = (data, crew) => {
-    // console.log(data);
-    // let content = data.destinations.find(e=> e.name == crew);
     if(crew) {
         name.innerText = crew.name;
         role.innerText = crew.role;
         bio.innerText = crew.bio;
         picture.innerHTML = `
             <source srcset="${crew.images.webp}" type="image/webp">
-            <img src="${crew.images.png}" alt="">          
+            <img src="${crew.images.png}" alt="image of ${crew.name}">          
         `;
     }
 }
 
+//update aria-selected attribute
 const updateActiveState = () => {
     let idx = spaceData.crew.findIndex(elm => elm.name == active_choice);
     for(let i=0; i<buttons.length; ++i) {
@@ -62,6 +63,7 @@ const updateActiveState = () => {
     }
 }
 
+//callback for each selection button
 buttons.forEach((btn, idx) => {
     btn.addEventListener('click', ()=> {
         //console.log(btn);

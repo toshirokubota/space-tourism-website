@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="style.css">
   <script type="module" src="destination.js" defer></script>
   <script type="module" src="shared.js" defer></script>
+  <title>Frontend Mentor | Space tourism - Destination Page</title>
 </head>
 <body class="destination">
     <header class="primary-header flex">
@@ -20,7 +21,6 @@
           <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
         </div>
         <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
-        <!-- <nav> style="--gap:8rem;"> -->
         <nav>
           <ul id="primary-navigation" data-visible="false" class="flex primary-navigation underline-indicators">
             <li><a href="./index.html"><span>00</span> Home</a></li>
@@ -32,18 +32,20 @@
     </header>
     <main class="grid-container">
         <!-- <div class="flex flex-col" style="padding-inline:20%;"> -->
-          <h1 class="uppercase fs-300 ff-sans-cond"><span class="text-accent">01</span> Pick your destination</h1>
-          <picture id="picture" style="padding-inline: 30%">
+          <h1 class="page-title uppercase fs-300 ff-sans-cond">
+            <span class="text-accent">01</span> Pick your destination
+          </h1>
+          <picture id="picture">
             <source srcset="" type="image/webp">
             <img src="" alt="">          
           </picture>
         <!-- </div> -->
         <div class="flow">
           <ul id="destination-choice" class="underline-indicators flex justify-content-center">
-              <button class="uppercase button-plain" aria-selected="true">Moon</button>
-              <button class="uppercase button-plain">Mars</button>
-              <button class="uppercase button-plain">Europa</button> 
-              <button class="uppercase button-plain">Titan</button>
+              <button tabindex="0" class="uppercase button-plain" aria-selected="true">Moon</button>
+              <button tabindex="0" class="uppercase button-plain">Mars</button>
+              <button tabindex="0" class="uppercase button-plain">Europa</button> 
+              <button tabindex="0" class="uppercase button-plain">Titan</button>
           </ul>    
           <h2 id="name" class="fs-700 uppercase"></h2>
           <p id="description" class="fs-100 ff-sans-normal text-accent">

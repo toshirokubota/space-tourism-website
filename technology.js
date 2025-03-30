@@ -12,6 +12,7 @@ const key = 'myData';
 const fetchUrl = './data.json';
 const key2 = 'technology_choice';
 
+//initialize the page
 getData(key, fetchUrl).then((data) => {
 if (data) {
     console.log('Data loaded:', data);
@@ -35,17 +36,19 @@ if (data) {
     }
 });
 
+//populate the page
 const populateTechnology = (data, tech) => {
     if(tech) {
         name.innerText = tech.name;
         description.innerText = tech.description;
         picture.innerHTML = `
                 <source srcset="${tech.images.portrait}" media="(min-width: 45rem)" />
-                <img src="${tech.images.landscape}" alt="" />
+                <img src="${tech.images.landscape}" alt="image of ${tech.name}" />
         `;
     }
 }
 
+//update aria-selected attribute
 const updateActiveState = () => {
     let idx = spaceData.technology.findIndex(elm => elm.name == active_choice);
     for(let i=0; i<buttons.length; ++i) {
@@ -57,6 +60,7 @@ const updateActiveState = () => {
     }
 }
 
+//callback for each selection button
 buttons.forEach((btn, idx) => {
     btn.addEventListener('click', ()=> {
         console.log(btn);
